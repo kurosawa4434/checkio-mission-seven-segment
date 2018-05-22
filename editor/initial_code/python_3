@@ -1,26 +1,12 @@
-def paper_dice(paper):
+def seven_segment(lit_seg, broken_seg):
 
-    return True or False
+    #replace this for solution
+    return 0
 
 
 if __name__ == '__main__':
-    assert paper_dice([
-                '  1  ',
-                ' 235 ',
-                '  6  ',
-                '  4  ']) is True, 'cross'
-    assert paper_dice([
-                '    ',
-                '12  ',
-                ' 36 ',
-                '  54',
-                '    ']) is True, 'zigzag'
-    assert paper_dice(['123456']) is False, '1 line'
-    assert paper_dice([
-                '123  ',
-                '  456']) is False, '2 lines_wrong'
-    assert paper_dice([
-                '126  ',
-                '  354']) is True, '2 lines_right'
-    print("Check done.")
+    assert seven_segment({'B', 'C', 'b', 'c'}, {'A'}) == 2, '11, 71'
+    assert seven_segment({'B', 'C', 'a', 'f', 'g', 'c', 'd'}, {'A', 'G', 'D', 'e'}) == 6, '15, 16, 35, 36, 75, 76'
+    assert seven_segment({'B', 'C', 'a', 'f', 'g', 'c', 'd'}, {'A', 'G', 'D', 'F', 'b', 'e'}) == 20, '15...98'
+    print('"Run" is good. How is "Check"?')
 
