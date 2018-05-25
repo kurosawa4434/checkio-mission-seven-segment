@@ -1,18 +1,18 @@
 <p>
-You have a device that uses <a href='https://en.wikipedia.org/wiki/Seven-segment_display'>Seven-segment display</a> to display 2 digit numbers.
-However, some of the segments are out of order and can't display.
+You have a device that uses a <a href='https://en.wikipedia.org/wiki/Seven-segment_display'>Seven-segment display</a> to display 2 digit numbers.
+However, some of the segments aren't working and can't be displayed.
 </p>
 <p>
-You will be given information on lit and broken segments.
-You don't know whether each broken segment is lit or not.
+You will be given information on the lit and broken segments.
+You won't know whether the broken segment is lit or not.
 You have to count and return the total number that the device may be displaying.
 </p>
 
-<p>The input is a set of lit segments(first argument) and a set of broken segments(second argument).</p>
+<p>The input is a set of lit segments (the first argument) and broken segments (the second argument).</p>
 <ul>
-    <li>Upper case letters represent tens place segments</li>
-    <li>Lower case letters represent ones place segments</li>
-    <li>top most: 'A(a)', top right: 'B(b)', bottom right: 'C(c)', bottom most: 'D(d)', bottom left: 'E(e)', top left: 'F(f)', middle: 'G(g)'</li>
+    <li>Uppercase letters represent the segments of the first out two digit number.</li>
+    <li>Lowercase letters represent the segments of the second out two digit number.</li>
+    <li>topmost: 'A(a)', top right: 'B(b)', bottom right: 'C(c)', bottommost: 'D(d)', bottom left: 'E(e)', top left: 'F(f)', middle: 'G(g)'</li>
 </ul>
 
 <div>
@@ -35,7 +35,7 @@ seven_segment({'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f'}, {'G'
     </p>
 </div>
 
-<p><strong>Input: </strong>Two arguments. The first one is the lit segments as a set of alphabets representing segments. The second one is the broken segments as a set of alphabets representing segments.</p>
+<p><strong>Input: </strong>Two arguments. The first one contains the lit segments as a set of letters representing segments. The second one contains the broken segments as a set of letters representing segments.</p>
 
 <p><strong>Output: </strong>The total number that the device may be displaying.</p>
 
