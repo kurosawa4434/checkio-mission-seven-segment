@@ -1,0 +1,48 @@
+<p>
+    あなたは 2桁の数字を表示できる
+    <a href='https://ja.wikipedia.org/wiki/7%E3%82%BB%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4'>
+        7セグメントディスプレイ</a>装置を持っています。
+    しかし、いくつかのセグメントは故障してます。
+</p>
+<p>
+    故障してるセグメントは点灯しているか否か不明です。
+    あなたは表示されている可能性のある数字の種類の総数を返さなくてはなりません。
+</p>
+
+<p>入力は点灯しているセグメントの集合 (第 1引数) と故障しているセグメントの集合 (第 2引数) です。</p>
+<ul>
+    <li>英大文字は左側の十の位のセグメントを表します</li>
+    <li>英小文字は右側のーの位のセグメントを表します</li>
+    <li>一番上: A(a), 右上: B(b), 右下: C(c), 一番下: D(d), 左下: E(e), 左上: F(f), 中央: G(g)
+</ul>
+
+<div>
+    <p style="text-align: left;">
+        <img  title="example" src="{{MEDIA}}checkio_seven_segment_00.png" alt="example" style="max-height: 150px"/>
+    </p>
+</div>
+
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+    <pre class="brush: python">
+seven_segment({'B', 'C', 'b', 'c'}, {'A'}) == 2    # 11, 71
+seven_segment({'B', 'C', 'a', 'c', 'd', 'f', 'g'}, {'A', 'D', 'G', 'e'}) == 6    # 15, 16, 35, 36, 75, 76
+seven_segment({'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f'}, {'G', 'g'}) == 4    # 0, 8, 80, 88</pre> </div>
+
+<div>
+    <p style="text-align: left;">
+        <img  title="example" src="{{MEDIA}}checkio_seven_segment_example_00.png" alt="example" style="max-height: 160px"/>
+    </p>
+</div>
+
+<p><strong>入力: </strong>2引数。 1番目は点灯しているセグメントの集合(文字の集合), 2番目は故障しているセグメントの集合 (文字の集合)
+<p><strong>出力: </strong>2桁の 7セグメントディスプレイ装置が表示している可能性のある数字の種類の総数</p>
+
+<p>
+    <strong>前提条件:</strong><br>
+<ul>
+    <li>all(re.match('[A-Ga-g]', s) for s in lit | broken)</li>
+    <li>len(lit  &amp;  broken) == 0</li>
+</ul>
+</p>
